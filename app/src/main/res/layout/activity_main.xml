@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_marginTop="7dp"
+                android:id="@+id/title"
+                android:text="Find new Jobs"
+                android:textSize="26sp"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@+id/title"
+                android:text="          Click an area to view jobs"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/computer"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+        </RelativeLayout>
+        <GridLayout
+            android:columnCount="2"
+            android:rowCount="7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnOrderPreserved="false"
+            android:alignmentMode="alignMargins"
+            >
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="60dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+                <Button
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:background="@null"></Button>
+                    <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+                    <ImageView
+                        android:src="@drawable/workathome"
+                        android:layout_width="80dp"
+                        android:layout_height="90dp"
+                        android:background="@null"/>
+                    <TextView
+                        android:text="Work from home"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="60dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+                <Button
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:background="@null"></Button>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+                    <ImageView
+                        android:src="@drawable/laptop"
+                        android:layout_width="80dp"
+                        android:layout_height="90dp"
+                        android:background="@null"/>
+                    <TextView
+                        android:text="Computer Science"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="60dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+                <Button
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:background="@null"></Button>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+                    <ImageView
+                        android:src="@drawable/workathome"
+                        android:layout_width="80dp"
+                        android:layout_height="90dp"
+                        android:background="@null"/>
+                    <TextView
+                        android:text="Work from home"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>
