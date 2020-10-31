@@ -2,10 +2,12 @@ package com.ccbury.joblisting;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 
 
 public class SplashScreen extends AppCompatActivity {
@@ -18,7 +20,7 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         Animation fadeInAnimationObject = new AlphaAnimation(0.1f, 1.00f); //From fully transparent to no transparency
-        fadeInAnimationObject.setDuration(3000); // 2 seconds
+        fadeInAnimationObject.setDuration(2000); // 2 seconds
         fadeInAnimationObject.setAnimationListener(new Animation.AnimationListener() {
             public void onAnimationStart(Animation animation) {
             }

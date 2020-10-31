@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Making a scroll view so that when more entrys are present. user can scroll down the llst -->
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!-- Making a scroll view so that when more entrys are present. user can scroll down the llst -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,203 +9,388 @@
 
     <!-- Start of linear layout for the whole page-->
     <LinearLayout
-        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        android:orientation="vertical">
         <!-- Create a relative layout that will contain the information at the top of the screen -->
         <RelativeLayout
-            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent">
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp">
+
             <TextView
-                android:layout_marginTop="7dp"
                 android:id="@+id/title"
-                android:text="Find new Jobs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Find new Careers"
+                android:textColor="#FFFFFF"
                 android:textSize="26sp"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textStyle="bold" />
+
             <TextView
-                android:layout_below="@+id/title"
-                android:paddingLeft="50dp"
-                android:text="Click an area to view jobs"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="#FFFFFF"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:paddingLeft="35dp"
+                android:text="Click a box to view career options"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
             <ImageView
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/computer"
                 android:layout_width="70dp"
-                android:layout_height="70dp"/>
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/computer" />
         </RelativeLayout>
         <!-- End of the top of the screen layout-->
         <!-- Begin grid layout that will contain all of the buttons for the user-->
-        <GridLayout
-            android:columnCount="2"
-            android:rowCount="7"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnOrderPreserved="false"
-            android:alignmentMode="alignMargins"
-            android:paddingTop="20dp">
+            android:layout_height="wrap_content">
 
-            <!-- First entry on grid. work from home -->
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
+            <GridLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp"
-                android:outlineSpotShadowColor="@color/trans"
-                android:outlineAmbientShadowColor="@color/trans"
-                app:cardBackgroundColor="#88FFFFFF">
-                <Button
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:background="@color/trans"
-                    android:id="@+id/workFromHome"/>
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:paddingTop="20dp"
+                android:rowCount="7">
+
+                <!-- First entry on grid. work from home -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:outlineAmbientShadowColor="@color/trans"
+                    android:outlineSpotShadowColor="@color/trans"
+                    app:cardBackgroundColor="#88FFFFFF"
+                    app:cardCornerRadius="12dp">
+
+                    <Button
+                        android:id="@+id/workFromHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/trans" />
+
                     <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent">
-                    <ImageView
-                        android:src="@drawable/workathome"
-                        android:layout_width="80dp"
-                        android:layout_height="90dp"
-                        android:background="@null"/>
-                    <TextView
-                        android:text="Work from home"
-                        android:textSize="18sp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:textColor="@color/grey_800"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- End of Work From Home entry -->
-            <!-- Start of computing entry -->
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp"
-                android:outlineSpotShadowColor="@color/trans"
-                android:outlineAmbientShadowColor="@color/trans"
-                app:cardBackgroundColor="#88FFFFFF"
-                >
-                <Button
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:background="@null"
-                    android:id="@+id/computerScience"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent">
-                    <ImageView
-                        android:src="@drawable/laptop"
-                        android:layout_width="80dp"
-                        android:layout_height="90dp"
-                        android:background="@null"/>
-                    <TextView
-                        android:text="Computing"
-                        android:textSize="18sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:textColor="@color/grey_800"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- End of computing entry -->
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-            <!-- Start of accountancy entry -->
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp"
-                android:outlineSpotShadowColor="@color/trans"
-                android:outlineAmbientShadowColor="@color/trans"
-                app:cardBackgroundColor="#88FFFFFF">
-                <Button
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:background="@null"
-                    android:id="@+id/accountancyFinance"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent">
-                    <ImageView
-                        android:src="@drawable/accounting"
-                        android:layout_width="80dp"
-                        android:layout_height="90dp"
-                        android:background="@null"/>
-                    <TextView
-                        android:text="Data Analytics"
-                        android:textSize="18sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:textColor="@color/grey_800"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- End of accountancy entry -->
-            <!-- Start of Engineering entry -->
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardCornerRadius="10dp"
-                android:layout_margin="12dp"
-                android:outlineSpotShadowColor="@color/trans"
-                android:outlineAmbientShadowColor="@color/trans"
-                app:cardBackgroundColor="#88FFFFFF">
-                <Button
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:background="@null"
-                    android:id="@+id/constructionEngineering"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent">
-                    <ImageView
-                        android:src="@drawable/construction"
-                        android:layout_width="80dp"
-                        android:layout_height="90dp"
-                        android:background="@null"/>
-                    <TextView
-                        android:text="Software Engineer"
-                        android:textSize="16sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:textColor="@color/grey_800"
-                        />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!-- End of Engineering entry -->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@null"
+                            android:src="@drawable/workathome" />
 
-        </GridLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Work from home"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey_800"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- End of Work From Home entry -->
+                <!-- Start of computing entry -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:outlineAmbientShadowColor="@color/trans"
+                    android:outlineSpotShadowColor="@color/trans"
+                    app:cardBackgroundColor="#88FFFFFF"
+                    app:cardCornerRadius="12dp">
+
+                    <Button
+                        android:id="@+id/computerScience"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@null"
+                            android:src="@drawable/laptop" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Computing"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey_800"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- End of computing entry -->
+
+                <!-- Start of accountancy entry -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:outlineAmbientShadowColor="@color/trans"
+                    android:outlineSpotShadowColor="@color/trans"
+                    app:cardBackgroundColor="#88FFFFFF"
+                    app:cardCornerRadius="12dp">
+
+                    <Button
+                        android:id="@+id/accountancyFinance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@null"
+                            android:src="@drawable/accounting" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Data Analytics"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey_800"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- End of accountancy entry -->
+                <!-- Start of Engineering entry -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:outlineAmbientShadowColor="@color/trans"
+                    android:outlineSpotShadowColor="@color/trans"
+                    app:cardBackgroundColor="#88FFFFFF"
+                    app:cardCornerRadius="10dp">
+
+                    <Button
+                        android:id="@+id/constructionEngineering"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@null"
+                            android:src="@drawable/construction" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Software Engineer"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey_800"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- End of Engineering entry -->
+
+
+                <!-- First entry on grid. work from home -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:outlineAmbientShadowColor="@color/trans"
+                    android:outlineSpotShadowColor="@color/trans"
+                    app:cardBackgroundColor="#88FFFFFF"
+                    app:cardCornerRadius="12dp">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/trans" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@null"
+                            android:src="@drawable/workathome" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Work from home"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey_800"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- End of Work From Home entry -->
+                <!-- Start of computing entry -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:outlineAmbientShadowColor="@color/trans"
+                    android:outlineSpotShadowColor="@color/trans"
+                    app:cardBackgroundColor="#88FFFFFF"
+                    app:cardCornerRadius="12dp">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@null"
+                            android:src="@drawable/laptop" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Computing"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey_800"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- End of computing entry -->
+
+                <!-- Start of accountancy entry -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:outlineAmbientShadowColor="@color/trans"
+                    android:outlineSpotShadowColor="@color/trans"
+                    app:cardBackgroundColor="#88FFFFFF"
+                    app:cardCornerRadius="12dp">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@null"
+                            android:src="@drawable/accounting" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Data Analytics"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey_800"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- End of accountancy entry -->
+                <!-- Start of Engineering entry -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:outlineAmbientShadowColor="@color/trans"
+                    android:outlineSpotShadowColor="@color/trans"
+                    app:cardBackgroundColor="#88FFFFFF"
+                    app:cardCornerRadius="10dp">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:background="@null"
+                            android:src="@drawable/construction" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Software Engineer"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey_800"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </GridLayout>
+        </ScrollView>
     </LinearLayout>
-</ScrollView>
+</LinearLayout>
