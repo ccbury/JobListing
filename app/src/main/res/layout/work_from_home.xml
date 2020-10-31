@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Making a scroll view so that when more entrys are present. user can scroll down the llst -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".WorkFromHomeActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+    <!-- Create a relative layout that will contain the information at the top of the screen -->
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <Button
+            android:layout_height="40dp"
+            android:layout_width="90dp"
+            android:text="Back"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:background="@drawable/backshape"
+            android:id="@+id/home"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/home"
+            android:id="@+id/title"
+            android:text="    Find WFH Jobs"
+            android:textSize="26sp"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/workathome"
+            android:layout_width="70dp"
+            android:layout_height="70dp">
+        </ImageView>
+
+    </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Making a scroll view so that when more entrys are present. user can scroll down the llst -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/background">
+    <TextView
+        android:id="@+id/title1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/laptop_icon"
+        android:text="Computer Science"
+        android:textSize="32sp"
+        android:textColor="#FFFFFF"
+        android:paddingTop="30dp"
+        android:textStyle="bold"
+        />
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/laptop"
+        android:id="@+id/laptop_icon"
+        android:contentDescription="Icon of the application fading into view" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/laptop_icon"
+        android:text="Careers"
+        android:textSize="32sp"
+        android:textColor="#FFFFFF"
+        android:paddingTop="75dp"
+        android:textStyle="bold"
+        />
+</RelativeLayout>
