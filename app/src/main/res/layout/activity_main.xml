@@ -256,12 +256,12 @@
                             android:layout_width="80dp"
                             android:layout_height="90dp"
                             android:background="@null"
-                            android:src="@drawable/workathome" />
+                            android:src="@drawable/crypto" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Work from home"
+                            android:text="Crypto Currencies"
                             android:textAlignment="center"
                             android:textColor="@color/grey_800"
                             android:textSize="18sp" />
@@ -301,7 +301,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Computing"
+                            android:text="Graduate Jobs"
                             android:textAlignment="center"
                             android:textColor="@color/grey_800"
                             android:textSize="18sp" />
@@ -342,7 +342,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Data Analytics"
+                            android:text="IT Helpdesk"
                             android:textAlignment="center"
                             android:textColor="@color/grey_800"
                             android:textSize="18sp" />
@@ -382,7 +382,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Software Engineer"
+                            android:text="Project Manager"
                             android:textAlignment="center"
                             android:textColor="@color/grey_800"
                             android:textSize="16sp" />
